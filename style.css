@@ -1,0 +1,149 @@
+:root {
+  /* colors */
+  --primary-orange: hsl(25, 97%, 53%);
+  --neutral-bg-dark: hsl(216, 12%, 8%);
+  --buttons-bg-dark: hsl(213, 14%, 27%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --light-grey: hsl(217, 12%, 63%);
+  --white-color: hsl(0, 0%, 100%);
+  --card-bg-dark: hsl(213, 19%, 18%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--white-color);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--neutral-bg-dark);
+  font-family: "Overpass", sans-serif;
+}
+
+/* card */
+/* 
+- To center a div - 
+make a card-holder div and make it display:flex 
+*/
+.card-holder {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: var(--card-bg-dark);
+  width: 330px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.star {
+  background-color: var(--buttons-bg-dark);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.star-image {
+  position: absolute;
+  text-align: center;
+  top: 11px;
+}
+/* h2 */
+.title {
+  margin: 1rem 0;
+  font-weight: 700;
+}
+/* para */
+.body-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--light-grey);
+  margin: 1rem 0;
+}
+/* rating */
+.rating-container {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.rating {
+  border: none;
+  background-color: var(--buttons-bg-dark);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light-grey);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.rating:hover {
+  background-color: var(--light-grey);
+  color: var(--white-color);
+}
+.selected {
+  background-color: var(--primary-orange);
+  color: var(--white-color);
+}
+/* submit button */
+.submit {
+  border: none;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  border-radius: 28px;
+  background-color: var(--primary-orange);
+  color: var(--white-color);
+  font-size: 15px;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+.submit:hover {
+  background-color: var(--white-color);
+  color: var(--primary-orange);
+}
+
+/* thankyou state card */
+
+.card-two {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.selected-rating {
+  margin: 2rem 0 1rem 0;
+  background-color: var(--buttons-bg-dark);
+  color: var(--primary-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 28px;
+}
+.selected-rating span {
+  color: var(--primary-orange);
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.attribution {
+  position: relative;
+  bottom: 150px;
+}
